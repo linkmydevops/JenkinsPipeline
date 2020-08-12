@@ -1,3 +1,8 @@
 code('code'){
-   stage(  
+   stage('Hello World'){
+      sh (echo hello world)
+   }
+   stage('Create a file'){
+      sh (touch file.txt)
+   }
 }
