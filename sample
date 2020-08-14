@@ -1,8 +1,17 @@
-code('code'){
-   stage('Hello World'){
-      sh (echo hello world)
-   }
-   stage('Create a file'){
-      sh (touch file.txt)
-   }
+node('node'){
+    stage('Hello World'){
+        sh "echo hello world"
+    }
+    stage('create a file'){
+      sh "touch file.txt"
+    }
+}
+
+node('node'){                       #node represents the node (slave)
+    stage('echo stage'){
+       sh "echo hello world"
+     }
+    stage('create a file'){
+       sh "touch abc.txt"
+     }   
 }
