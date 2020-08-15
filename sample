@@ -1,11 +1,5 @@
-node('node'){
-    stage('Hello World'){
-        sh "echo hello world"
-    }
-    stage('create a file'){
-      sh "touch file.txt"
-    }
-}
+Simple Jenkins Pipeline
+
 
 node('node'){                       #node represents the node (slave)
     stage('echo stage'){
